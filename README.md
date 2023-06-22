@@ -1,6 +1,9 @@
 # AdminDashboard
 Project for the "Intermediate HTML and CSS Course" of The Odin Project
 
+Live Demo:
+https://quirozdev.github.io/AdminDashboard/
+
 Credits for the profile images/gifs:
 
 https://www.icegif.com/bongo-cat/
