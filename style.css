@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --bg-white-color: #fafaf9;
+    --red-color: #ef4444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 5fr;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 1 / -1;
+    background-color: var(--red-color);
+    color: #eef2ff;
+    display: grid;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 24px;
+    padding: 0 16px;
+}
+
+.dashboard-title {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+    justify-items: start;
+}
+
+.dashboard-title .dashboard-icon {
+    width: 50px;
+}
+
+.navbar {
+    display: grid;
+    gap: 24px;
+}
+
+.navigation-section, .branding-section {
+    display: grid;
+    gap: 8px;
+}
+
+.navigation-section > li, .branding-section > li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+.navigation-section a, .branding-section a {
+    text-decoration: none;
+    color: #eef2ff;
+    font-weight: 600;
+}
+
+.icon {
+    width: 25px;
+    fill: #eef2ff;
+}
+
+.header {
+    background-color: var(--bg-white-color);
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas: 
+        "search-container    account-info-container"
+        "greetings-container option-buttons";
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 1px 3px black;
+    padding: 16px 24px;
+}
+
+.black-icon {
+    fill: black;
+}
+
+.search-container {
+    grid-area: search-container;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 12px;
+}
+
+input[type="search"] {
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.account-info-container {
+    grid-area: account-info-container;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.greetings-container {
+    grid-area: greetings-container;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+}
+
+.greetings-container .profile-image {
+    width: 75px;
+    height: auto;
+}
+
+.option-buttons {
+    grid-area: option-buttons;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 12px;
+}
+
+.option-button {
+    padding: 8px 24px;
+    border: none;
+    border-radius: 12px;
+    color: #eef2ff;
+    background-color: var(--red-color);
+    width: 100px;
+}
+
+.main {
+    padding: 16px 12px;
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    background-color: #d6d3d1;
+    gap: 16px;
+}
+
+.main h4 {
+    font-size: 22px;
+}
+
+.projects-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    background-color: #fafaf9;
+    padding: 16px;
+    border-radius: 8px;
+    border-left: 4px solid var(--red-color);
+    display: grid;
+
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 13px;
+    color: #57534e;
+}
+
+.project-buttons {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+}
+
+.announcements {
+    background-color: #fafaf9;
+    padding: 16px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.announcement {
+    border-bottom: 2px solid #57534e;
+    padding: 8px;
+}
+
+.announcement-title {
+    font-weight: bold;
+}
+
+.announcement-description {
+    font-size: 12px;
+    color: #57534e;
+}
+
+.trendings {
+    background-color: #fafaf9;
+    padding: 16px;
+    border-radius: 8px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+}
+
+.trending {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+}
+
+.account-direction {
+    font-weight: 600;
+}
+
+.account-alias {
+    color: #57534e;
+}
